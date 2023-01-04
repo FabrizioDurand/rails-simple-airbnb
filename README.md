@@ -1,24 +1,50 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Install
 
-Things you may want to cover:
+### Clone the repository
 
-* Ruby version
+```shell
+git clone git@github.com:FabrizioDurand/rails-simple-airbnb.git
+cd project
+```
 
-* System dependencies
+### Check your Ruby version
 
-* Configuration
+```shell
+ruby -v
+```
 
-* Database creation
+The ouput should start with something like `ruby 3.1.2`
 
-* Database initialization
+If not, install the right ruby version following this link: https://www.ruby-lang.org/fr/documentation/installation/
 
-* How to run the test suite
+### Install dependencies
 
-* Services (job queues, cache servers, search engines, etc.)
+Using [Bundler](https://github.com/bundler/bundler) and [Yarn](https://github.com/yarnpkg/yarn):
 
-* Deployment instructions
+```shell
+bundle && yarn
+```
 
-* ...
+### Initialize the database
+
+```shell
+rails db:create db:migrate db:seed
+```
+
+## Serve
+
+Launch in two different terminal windows:
+
+```shell
+rails s
+```
+
+```shell
+yarn build --watch
+```
+
+## Enjoy
+
+Go to the provided link that should look like `http://127.0.0.1:3000`
